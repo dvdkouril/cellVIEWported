@@ -18,10 +18,9 @@
 		00B9955B1B128DF400A5C623 /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B995591B128DF400A5C623 /* IOSurface.framework */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		543F606940A841769C30FC37 /* cellVIEWported_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = FFE00689023F42D0AF9951B4 /* cellVIEWported_Prefix.pch */; };
-		EBB53C6DB03E459BBC260E38 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7230222B4F8041CEA1423C09 /* CinderApp.icns */; };
-		92813487D4554CDF911296A4 /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = C53BF27520AB4B5CBAE15865 /* Resources.h */; };
-		A668E63EFFEE499AB528A689 /* cellVIEWportedApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3622B9021194D9CB4DBEA63 /* cellVIEWportedApp.cpp */; };
+		90BD73C6084D4621B3F5ABD6 /* cellVIEWportedApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6B31B83E73B44D54A69969C8 /* cellVIEWportedApp.cpp */; };
+		D7BD74911DA68E23001FAD29 /* PDBLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7BD748F1DA68E23001FAD29 /* PDBLoader.cpp */; };
+		E474D47E311F4B8B98EB140F /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = D0B607E3EC5C4BCD8320A893 /* CinderApp.icns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,15 +34,17 @@
 		00B995581B128DF400A5C623 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		00B995591B128DF400A5C623 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		26CAE14E44FA4A209981E999 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		6B31B83E73B44D54A69969C8 /* cellVIEWportedApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = cellVIEWportedApp.cpp; path = ../src/cellVIEWportedApp.cpp; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* cellVIEWported.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cellVIEWported.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3622B9021194D9CB4DBEA63 /* cellVIEWportedApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../src/cellVIEWportedApp.cpp; sourceTree = "<group>"; name = cellVIEWportedApp.cpp; };
-		C53BF27520AB4B5CBAE15865 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../include/Resources.h; sourceTree = "<group>"; name = Resources.h; };
-		7230222B4F8041CEA1423C09 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; name = CinderApp.icns; };
-		73D6F003CE6C4018B6C87C17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
-		FFE00689023F42D0AF9951B4 /* cellVIEWported_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = cellVIEWported_Prefix.pch; sourceTree = "<group>"; name = cellVIEWported_Prefix.pch; };
+		CDED726C6CF34AE1943B37E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0B607E3EC5C4BCD8320A893 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
+		D7BD748F1DA68E23001FAD29 /* PDBLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PDBLoader.cpp; path = ../src/PDBLoader.cpp; sourceTree = "<group>"; };
+		D7BD74901DA68E23001FAD29 /* PDBLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDBLoader.h; path = ../src/PDBLoader.h; sourceTree = "<group>"; };
+		E8DF4A8477C44002B8A727FB /* cellVIEWported_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = cellVIEWported_Prefix.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +69,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D3622B9021194D9CB4DBEA63 /* cellVIEWportedApp.cpp */,
+				D7BD748F1DA68E23001FAD29 /* PDBLoader.cpp */,
+				6B31B83E73B44D54A69969C8 /* cellVIEWportedApp.cpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -124,18 +133,12 @@
 			name = cellVIEWported;
 			sourceTree = "<group>";
 		};
-		01B97315FEAEA392516A2CEA /* Blocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Blocks;
-			sourceTree = "<group>";
-		};
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				C53BF27520AB4B5CBAE15865 /* Resources.h */,
-				FFE00689023F42D0AF9951B4 /* cellVIEWported_Prefix.pch */,
+				D7BD74901DA68E23001FAD29 /* PDBLoader.h */,
+				26CAE14E44FA4A209981E999 /* Resources.h */,
+				E8DF4A8477C44002B8A727FB /* cellVIEWported_Prefix.pch */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -143,8 +146,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7230222B4F8041CEA1423C09 /* CinderApp.icns */,
-				73D6F003CE6C4018B6C87C17 /* Info.plist */,
+				D0B607E3EC5C4BCD8320A893 /* CinderApp.icns */,
+				CDED726C6CF34AE1943B37E2 /* Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -184,6 +187,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "cellVIEWported" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -208,7 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB53C6DB03E459BBC260E38 /* CinderApp.icns in Resources */,
+				E474D47E311F4B8B98EB140F /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +224,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A668E63EFFEE499AB528A689 /* cellVIEWportedApp.cpp in Sources */,
+				90BD73C6084D4621B3F5ABD6 /* cellVIEWportedApp.cpp in Sources */,
+				D7BD74911DA68E23001FAD29 /* PDBLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,18 +235,19 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CINDER_PATH = /Users/dvdthepmkr/Downloads/cinder_0.9.0_mac;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cellVIEWported_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = cellVIEWported_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -255,6 +262,7 @@
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CINDER_PATH = /Users/dvdthepmkr/Downloads/cinder_0.9.0_mac;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -262,12 +270,12 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = cellVIEWported_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"NDEBUG=1",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = cellVIEWported_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
@@ -284,7 +292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CINDER_PATH = "../../../../Downloads/cinder_0.9.0_vc2013/cinder_0.9.0_vc2013";
+				CINDER_PATH = ../../cinder_0.9.0_mac;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				ENABLE_TESTABILITY = YES;
@@ -302,7 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CINDER_PATH = "../../../../Downloads/cinder_0.9.0_vc2013/cinder_0.9.0_vc2013";
+				CINDER_PATH = ../../cinder_0.9.0_mac;
 				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
 				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
