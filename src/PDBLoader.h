@@ -9,10 +9,12 @@
 #ifndef PDBLoader_hpp
 #define PDBLoader_hpp
 
+#define PROJECT_PATH "/Users/dvdthepmkr/Google Drive/projects/cellVIEW/cellVIEWported/"
+
 class PDBLoader {
 public:
     PDBLoader(std::string proteinName, bool loadFromRemote = false);
-    virtual ~PDBLoader();
+    //virtual ~PDBLoader();
     
     std::vector<float> loadAndParse();
     
@@ -20,7 +22,7 @@ private:
     std::string path;
     std::string url;
     
-    cinder::vec3 parsePDBLine(std::string line);
+    bool parsePDBLine(std::string line, cinder::vec3 & pos);
 };
 
 
