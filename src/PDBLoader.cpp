@@ -55,6 +55,7 @@ std::vector<std::string> split(std::string line)
     {
         results.push_back(std::string(current, next));
         current = next + 1;
+        while(*current == ' ') current = current + 1;
         next = find(current, end, ' ');
     }
     results.push_back(std::string(current, next));
@@ -91,9 +92,9 @@ bool PDBLoader::parsePDBLine(std::string line, cinder::vec3 & pos) {
     auto tokens = split(line);
     if (tokens[0] == "ATOM")
     {
-        std::string xStr = tokens[20];
-        std::string yStr = tokens[21];
-        std::string zStr = tokens[22];
+        std::string xStr = tokens[6];
+        std::string yStr = tokens[7];
+        std::string zStr = tokens[8];
         
         pos.x = ::atof(xStr.c_str());
         pos.y = ::atof(yStr.c_str());

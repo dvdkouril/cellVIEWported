@@ -32,7 +32,8 @@ void cellVIEWportedApp::setup()
     glGetIntegerv(GL_MINOR_VERSION, &minor);
     std::cout << "OpenGL version: " << major << " " << minor << std::endl;
     
-    PDBLoader loader("2rcj", false);
+    //PDBLoader loader("2rcj", false);
+    PDBLoader loader("2hhb", false);
     this->atomPositions = loader.loadAndParse();
     
     try {
@@ -80,12 +81,7 @@ void cellVIEWportedApp::draw()
         gl::setDefaultShaderVars();
         gl::pointSize(4.0f);
         gl::drawArrays(GL_POINTS, 0, this->atomPositions.size() / 3);
-    }
-    for(int i = 0; i < atomPositions.size(); i += 3) {
-        gl::drawSphere(vec3(atomPositions[i], atomPositions[i+1], atomPositions[i+2]), 0.1f);
-    }
-    //gl::drawCube(vec3(0,0,0), vec3(10,10,10));
-    
+    }    
 }
 
 CINDER_APP( cellVIEWportedApp, RendererGl )
