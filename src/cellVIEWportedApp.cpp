@@ -4,6 +4,7 @@
 #include "cinder/CameraUi.h"
 
 #include "PDBLoader.h"
+#include "SceneRenderer.hpp"
 
 using namespace ci;
 using namespace ci::app;
@@ -16,14 +17,23 @@ class cellVIEWportedApp : public App {
 	void update() override;
 	void draw() override;
     
+    cellVIEWportedApp(); // I don't know if I can do this...
+    
 private: // only temporary, scene info will go into separate class
-    std::vector<float> atomPositions;
-    gl::VaoRef mVao;
-    gl::VboRef mVbo;
-    gl::GlslProgRef mShaderProg;
+//    std::vector<float> atomPositions;
+//    gl::VaoRef mVao;
+//    gl::VboRef mVbo;
+//    gl::GlslProgRef mShaderProg;
+    SceneRenderer * sceneRenderer;
+    
     CameraPersp mCamera;
     CameraUi mCameraUi;
 };
+
+cellVIEWportedApp::cellVIEWportedApp() : App()
+{
+    sceneRenderer = new SceneRenderer(); // TODO: delete this
+}
 
 void cellVIEWportedApp::setup()
 {
@@ -31,28 +41,6 @@ void cellVIEWportedApp::setup()
     glGetIntegerv(GL_MAJOR_VERSION, &major);
     glGetIntegerv(GL_MINOR_VERSION, &minor);
     std::cout << "OpenGL version: " << major << " " << minor << std::endl;
-    
-    //PDBLoader loader("2rcj", false);
-    PDBLoader loader("2hhb", false);
-    this->atomPositions = loader.loadAndParse();
-    
-    try {
-        mShaderProg = gl::GlslProg::create(loadAsset("RenderProteins.vs"), loadAsset("RenderProteins.fs"));
-    } catch (const gl::GlslProgCompileExc& exc) {
-        //CI_LOG_E("Shader load failed: " << exc.what());
-        cout << "Error while loading shaders" << exc.what() << endl;
-        quit();
-    }
-    cout << "Shaders successfully loaded, compiled and linked" << endl;
-    
-    //vbo setup?
-    mVao = gl::Vao::create();
-    gl::ScopedVao vaoScope(mVao);
-    
-    mVbo = gl::Vbo::create(GL_ARRAY_BUFFER, sizeof(float) * this->atomPositions.size(), this->atomPositions.data(), GL_STATIC_DRAW);
-    gl::ScopedBuffer scopedBuffer(mVbo);
-    gl::vertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-    gl::enableVertexAttribArray(0);
     
     //mCamera.setEyePoint(vec3(50, 50, 50));
     mCamera.lookAt(vec3(50, 50, 50), vec3(0,0,0));
@@ -69,19 +57,7 @@ void cellVIEWportedApp::update()
 
 void cellVIEWportedApp::draw()
 {
-	gl::clear( Color( 0.8f, 0.8f, 0.8f ) );
-    
-    gl::setMatrices(mCamera);
-    
-    {
-        gl::ScopedGlslProg prog(mShaderProg);
-    
-        gl::ScopedVao vaoScoped(this->mVao);
-    
-        gl::setDefaultShaderVars();
-        gl::pointSize(4.0f);
-        gl::drawArrays(GL_POINTS, 0, this->atomPositions.size() / 3);
-    }    
+    this->sceneRenderer->drawScene();
 }
 
 CINDER_APP( cellVIEWportedApp, RendererGl )
